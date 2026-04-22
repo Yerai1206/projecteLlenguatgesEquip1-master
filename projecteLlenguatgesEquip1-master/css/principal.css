@@ -65,6 +65,10 @@ h3, h2, h1[id] {
     background-color: #966b4b;
     margin-top:200px;
     height: auto;
+    background-image: 
+        radial-gradient(circle at 100% 100%, rgba(180, 137, 105, 0.3) 0%, transparent 50%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 #peu{
@@ -123,10 +127,11 @@ h3, h2, h1[id] {
     border: solid 3.5px #382516;
     width: 12%;
     border-radius: 10px;
-    margin-top: 0px;
+    margin-top: 220px;
     height: 315px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
     text-align: center;
+    z-index: 100;
 }
 
 ul.llista1{
@@ -196,4 +201,38 @@ a{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
 }
 
+/* ===== CSS3 EFFECTS ===== */
+
+/* Text-shadow para títulos */
+h1, h2, h3 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#Menu1 .llista1 li a {
+    transition: all 0.3s ease;
+}
+
+#Menu1 .llista1 li:first-child a {
+    text-shadow: 1px 1px 2px rgba(56, 37, 22, 0.4);
+}
+
+/* Radial-gradient en elemento decorativo */
+.cespedFoter {
+    background: radial-gradient(circle at center, rgba(200, 150, 100, 0.5), rgba(100, 70, 50, 0.8));
+    border-radius: 50%;
+}
+
+/* Múltiples transforms en botón de audio */
+#btnAudio {
+    transition: all 0.3s ease;
+}
+
+#btnAudio:active {
+    transform: scale(0.95);
+}
+
+/* Gradient adicional en footer */
+#peu {
+    background: linear-gradient(to bottom, rgba(150, 107, 75, 0.9) 0%, rgba(100, 70, 50, 0.95) 50%, rgba(50, 30, 20, 1) 100%);
+}
 

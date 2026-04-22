@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /php/
+Disallow: /img/
+Allow: /
+
+Sitemap: sitemap.xml

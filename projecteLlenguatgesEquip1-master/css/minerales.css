@@ -2,88 +2,112 @@
 #Menu2 {
     position: fixed;
     right: 1.5%;
-    background-color: rgba(255, 200, 158, 0.7);
+    background-color: rgba(255, 200, 158, 0.8);
     border: solid 3.5px #382516;
-    width: 5.7%;
+    width: 80px;
     border-radius: 10px;
     margin-top: -1px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
-    margin-left: 0px;
-    height: 308.5px;
-    padding-top: 5px;
-    padding-right: 2px;
+    height: auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
 }
 
-.menuimg2 {
-    display: flex;
-    background-color: green;
-    border: solid 2px #382516;
-    width: 60px;
-    height: 47px;
-    border-radius: 10px;
-    margin-top: 5px;
-    margin-left: 6px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
-    padding-top: 5px;
-    justify-content: center;
-    align-items: center;
-}
-.menuimg3 {
-    display: flex;
-    background-color: yellow;
-    border: solid 2px #382516;
-    width: 60px;
-    height: 47px;
-    border-radius: 10px;
-    margin-top: 5px;
-    margin-left: 6px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
-    padding-top: 5px;
-    justify-content: center;
-    align-items: center;
-}
-.menuimg4 {
-    background-color: orange;
-    border: solid 2px #382516;
-    width: 60px;
-    height: 47px;
-    border-radius: 10px;
-    margin-top: 5px;
-    margin-left: 6px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
-    padding-top: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.menuimg5 {
-    background-color: red;
-    border: solid 2px #382516;
-    width: 60px;
-    height: 47px;
-    border-radius: 10px;
-    margin-top: 5px;
-    margin-left: 6px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
-    padding-top: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+.menuimg2,
+.menuimg3,
+.menuimg4,
+.menuimg5,
 .menuimg1 {
-    margin: 2.5px;
-    width: 60px;
-    height: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.menuimg2:hover,
+.menuimg3:hover,
+.menuimg4:hover,
+.menuimg5:hover,
+.menuimg1:hover {
+    transform: scale(1.1);
 }
 
 .SubMenu {
-    background-color:rgba(150, 107, 75, 1);
+    background: linear-gradient(135deg, rgba(150, 107, 75, 1), rgba(180, 137, 105, 1));
     border: solid 2px #382516;
     border-radius: 10px;
-    padding: 10px;
-    margin-left: 15%;
-    width: 30px;
-    height: 30px;
+    padding: 8px;
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.SubMenu:hover {
+    box-shadow: 0 4px 8px rgba(255, 200, 100, 0.8);
+    transform: rotate(5deg);
+}
+
+/* ===== TABLA DE MINERALES ===== */
+
+.tabla-minerales {
+    width: 95%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 200, 158, 0.8);
+    border: 3px solid #382516;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.tabla-minerales thead {
+    background: linear-gradient(135deg, rgba(150, 107, 75, 1), rgba(180, 137, 105, 1));
+}
+
+.tabla-minerales th {
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #382516;
+    font-size: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.tabla-minerales td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #382516;
+    color: #382516;
+    font-size: 14px;
+}
+
+.tabla-minerales tbody tr:nth-child(even) {
+    background-color: rgba(255, 220, 180, 0.6);
+}
+
+.tabla-minerales tbody tr:nth-child(odd) {
+    background-color: rgba(255, 235, 200, 0.4);
+}
+
+.tabla-minerales tbody tr:hover {
+    background-color: rgba(200, 160, 120, 0.4);
+    transition: background-color 0.3s ease;
+}
+
+.tabla-minerales tfoot {
+    background-color: rgba(150, 107, 75, 0.5);
+}
+
+.tabla-minerales tfoot th {
+    background: linear-gradient(90deg, rgba(150, 107, 75, 0.7), rgba(100, 70, 50, 0.7));
+    color: white;
+    font-size: 13px;
 }
 
 ul.llista{
@@ -140,7 +164,7 @@ ul.llista{
 
 .imagen1 {
     width: 76.3%;
-    height: 100px;
+    height: 200px;
     background-color: rgba(255, 200, 158, 0.7);
     border: solid 3.5px #382516;
     margin-top: 0px;
@@ -149,9 +173,10 @@ ul.llista{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
-    object-fit: cover;
+    object-fit: contain;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 4px;
 }

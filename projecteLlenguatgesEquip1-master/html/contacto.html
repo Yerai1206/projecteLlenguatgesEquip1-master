@@ -13,11 +13,29 @@
     <div id="wrapper">
     <header id="cap">
         <div class="cesped"></div>
-        <img class="logo" src="img/LOGO.webp" alt="Logo">
-        <img class="FondoCap" src="img/NUBES3.jpg" alt="Fondo">
+        <img class="logo" src="../img/LOGO.webp" alt="Logo">
+        <img class="FondoCap" src="../img/NUBES3.jpg" alt="Fondo">
+
+        <!-- AUDIO -->
+        <audio id="miAudio" src="img/Videos/Terraria Music - Day.mp3"></audio>
+        <button id="btnAudio">Musica</button>
+        <script>
+        const audio = document.getElementById("miAudio");
+        const btn = document.getElementById("btnAudio");
+
+        btn.addEventListener("click", () => {
+            if (audio.paused) {
+            audio.play();
+            btn.textContent = "Pausar";
+            } else {
+            audio.pause();
+            btn.textContent = "Reproducir";
+            }
+        });
+        </script>
     </header>
     <main id="cos">
-        <div class="Menu1">
+        <div id="Menu1">
             <ul class="llista1">
                 <li> <a href="../index.html">TERRARIA</a> </li><br>
                 <li> <a href="../html/armaduras.html"> ARMADURAS </a></li><br>
@@ -40,28 +58,98 @@
 -->
         
     <div class="caja">
-            <p class="textocabeza">Formulario de Registro</p>
+            <p class="textocabeza">Formulario de Contacto - Unirse a la Aventura</p>
         </div>
     <div class="caja">
         <form action="../php/contacto.php" method="post">
-        <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre" required>
-        <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido" required>
-        <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo" required>
-        <input class="controls" type="password" name="contrasena" id="contrasena" placeholder="Ingrese su Contraseña" required>
-        <input class="controls" type="tel" name="tlf" id="tlf" placeholder="Ingrese su Número de teléfono" required>
-        <button type="submit" class="botons">Registrar</button>
-        <p class="textito">
-            <a href="mailto:stogabrad@alu.edu.gva.es">¡Contacta con nosotros!</a>
-        </p>
-    </form>
+            <!-- Datos personales -->
+            <fieldset>
+                <legend>Información Personal <span class="requerido">*</span></legend>
+                
+                <label for="nombres">Nombre <span class="requerido">*</span></label>
+                <input class="controls" type="text" name="nombres" id="nombres" placeholder="Tu nombre completo" required pattern="[a-zA-Záéíóú\s]{3,50}" title="Mínimo 3 caracteres, solo letras">
+                
+                <label for="apellidos">Apellidos <span class="requerido">*</span></label>
+                <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Tus apellidos" required pattern="[a-zA-Záéíóú\s]{3,50}">
+                
+                <label for="correo">Correo Electrónico <span class="requerido">*</span></label>
+                <input class="controls" type="email" name="correo" id="correo" placeholder="tu.correo@ejemplo.com" required title="Ingresa un correo válido">
+            </fieldset>
+            
+            <!-- Información de juego -->
+            <fieldset>
+                <legend>Información del Jugador</legend>
+                
+                <label for="nivel_juego">Nivel de Experiencia en Terraria</label>
+                <select class="controls" name="nivel_juego" id="nivel_juego">
+                    <optgroup label="Principiante">
+                        <option value="nunca">Nunca he jugado</option>
+                        <option value="iniciado">Acabo de empezar</option>
+                    </optgroup>
+                    <optgroup label="Intermedio">
+                        <option value="intermedio">Tengo experiencia moderada</option>
+                        <option value="avanzado">Soy bastante hábil</option>
+                    </optgroup>
+                    <optgroup label="Experto">
+                        <option value="experto">Soy un veterano</option>
+                        <option value="speedrunner">Speedrunner / Máximo desafío</option>
+                    </optgroup>
+                </select>
+                
+                <label for="horas_juego">Horas jugadas (aproximado) <span class="requerido">*</span></label>
+                <input class="controls" type="number" name="horas_juego" id="horas_juego" min="0" max="9999" placeholder="0" required title="Ingresa un número">
+                
+                <label for="fecha_registro">Fecha de Registro <span class="requerido">*</span></label>
+                <input class="controls" type="date" name="fecha_registro" id="fecha_registro" required>
+                
+                <label for="clase_favorita">Clase Favorita <span class="requerido">*</span></label>
+                <input class="controls" type="text" name="clase_favorita" id="clase_favorita" placeholder="Ej: Melee, Mage, Summoner" required list="clases_terraria">
+                <datalist id="clases_terraria">
+                    <option value="Melee">
+                    <option value="Magic">
+                    <option value="Ranged">
+                    <option value="Summoner">
+                    <option value="Hybrid">
+                </datalist>
+            </fieldset>
+            
+            <!-- Contacto -->
+            <fieldset>
+                <legend>Datos de Contacto <span class="requerido">*</span></legend>
+                
+                <label for="tlf">Número de Teléfono <span class="requerido">*</span></label>
+                <input class="controls" type="tel" name="tlf" id="tlf" placeholder="+34 600 000 000" required pattern="[\d\s\+\-]{7,15}" title="Formato: +34 600000000">
+                
+                <label for="contraseña">Contraseña <span class="requerido">*</span></label>
+                <input class="controls" type="password" name="contrasena" id="contrasena" placeholder="Contraseña segura" required minlength="8" title="Mínimo 8 caracteres">
+            </fieldset>
+            
+            <!-- Comentarios -->
+            <fieldset>
+                <legend>Mensaje Adicional</legend>
+                
+                <label for="comentarios">Cuéntanos sobre ti o tus experiencias en Terraria</label>
+                <textarea class="controls textarea-form" name="comentarios" id="comentarios" placeholder="Comparte tus aventuras, sugerencias o simplemente saluda..." rows="5" maxlength="500"></textarea>
+                <small>Máximo 500 caracteres</small>
+            </fieldset>
+            
+            <!-- Botones -->
+            <div class="form-buttons">
+                <button type="submit" class="botons">Registrar</button>
+                <button type="reset" class="botons botons-reset">Limpiar</button>
+            </div>
+            
+            <p class="textito">
+                <a href="mailto:stogabrad@alu.edu.gva.es">✉️ ¡Contacta directamente con nosotros!</a>
+            </p>
+        </form>
 
     </main>
 
     <footer id="peu">
-        <!--<div class="cespedFoter"> </div>-->
-        <div class="MenuPeu">
-            <div class="dinspeu"><a href="https://terraria.softonic.com/">INSTALAR</a></div>
-            <div class="dinspeu"><a>CONTACTO</a></div>
+        <div id="MenuPeu">
+            <div class="dinspeu"><a href="https://store.steampowered.com/app/105600/Terraria/">INSTALAR</a></div>
+            <div class="dinspeu"><a href="html/contacto.html" >CONTACTO</a></div>
             <div class="dinspeu"><a href="https://terraria.org/">PÁGINA TERRARIA OFICIAL</a></div>
         </div>
     </footer>

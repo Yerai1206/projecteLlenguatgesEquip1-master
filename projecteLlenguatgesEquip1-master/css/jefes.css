@@ -335,3 +335,62 @@
 .cajaImagenes2 {
     display: flex;
 }
+
+/* ===== TABLA DE JEFES ===== */
+
+.tabla-jefes {
+    width: 95%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 200, 158, 0.8);
+    border: 3px solid #382516;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.tabla-jefes thead {
+    background: linear-gradient(135deg, rgba(150, 107, 75, 1), rgba(180, 137, 105, 1));
+}
+
+.tabla-jefes th {
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #382516;
+    font-size: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.tabla-jefes td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #382516;
+    color: #382516;
+    font-size: 14px;
+}
+
+.tabla-jefes tbody tr:nth-child(even) {
+    background-color: rgba(255, 220, 180, 0.6);
+}
+
+.tabla-jefes tbody tr:nth-child(odd) {
+    background-color: rgba(255, 235, 200, 0.4);
+}
+
+.tabla-jefes tbody tr:hover {
+    background-color: rgba(200, 160, 120, 0.4);
+    transition: background-color 0.3s ease;
+}
+
+.tabla-jefes tfoot {
+    background-color: rgba(150, 107, 75, 0.5);
+}
+
+.tabla-jefes tfoot th {
+    background: linear-gradient(90deg, rgba(150, 107, 75, 0.7), rgba(100, 70, 50, 0.7));
+    color: white;
+    font-size: 13px;
+}
+
