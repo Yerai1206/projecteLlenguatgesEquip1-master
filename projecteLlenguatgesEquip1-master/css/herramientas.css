@@ -4,9 +4,9 @@
     right: 1.5%;
     background-color: rgba(255, 200, 158, 0.8);
     border: solid 3.5px #382516;
-    width: 80px;
+    width: 4.5%;
     border-radius: 10px;
-    margin-top: 220px;
+    margin-top: 0px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
     height: auto;
     padding: 12px;
@@ -71,7 +71,7 @@ ul.llista{
 }
 
 #caja0 {
-    width: 75%;
+    width: 75.6%;
     height: auto;
     background-color: rgba(255, 200, 158, 0.7);
     border: solid 3.5px #382516;
@@ -86,7 +86,7 @@ ul.llista{
 
 #caja1 { 
     float: right;
-    width: 35%;
+    width: 30%;
     height: auto;
     background-color: rgba(255, 200, 158, 0.7);
     border: solid 3.5px #382516;
@@ -101,7 +101,7 @@ ul.llista{
 }
 
 .imagen1 {
-    width: 40%;
+    width: 45.5%;
     height: 180px;
     background-color: rgba(255, 200, 158, 0.7);
     border: solid 3.5px #382516;
@@ -114,7 +114,7 @@ ul.llista{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 6px;
+    padding: 0px;
 }
 
 
@@ -134,7 +134,7 @@ ul.llista{
 }
 
 .imagen2 {
-    width: 28%;
+    width: 28.5%;
     height: 180px;
     background-color: rgba(255, 200, 158, 0.7);
     border: solid 3.5px #382516;
@@ -148,7 +148,7 @@ ul.llista{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 6px;
+    padding: 0px;
 }
 
 
@@ -169,7 +169,7 @@ ul.llista{
 }
 
 .imagen3 {
-    width: 30%;
+    width: 30.5%;
     height: 180px;
     background-color: rgba(255, 200, 158, 0.7);
     border: solid 3.5px #382516;
@@ -182,12 +182,12 @@ ul.llista{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 6px;
+    padding: 0px;
 }
 
 #caja4 {
     float: right;
-    width: 65%;
+    width: 65.6%;
     height: auto;
     background-color: rgba(255, 200, 158, 0.7);
     border: solid 3.5px #382516;
