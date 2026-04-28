@@ -192,3 +192,8 @@ small {
 .textito{
     text-align: center;
 }
+
+.error {
+    border: 2px solid red !important;
+    background-color: #ffe5e5;
+}
