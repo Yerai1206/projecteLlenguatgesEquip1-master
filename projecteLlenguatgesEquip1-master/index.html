@@ -6,6 +6,9 @@
     <title>TERRARIA</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/principal.css">
+    <script src="js/reloj.js"></script>
+    <script src="js/alerts.js"></script>
+    <script src="js/funciones.js"></script>
     <link rel="icon" href="img/ARBOL.jpeg" type="image/x-icon">
 </head>
 
@@ -97,6 +100,79 @@
                 </ul>
             </div>
         </div>
+
+        <!-- ========== BANNER DE IMÁGENES ========== -->
+        <div id="banner-wrapper">
+            <div id="banner">
+                <div class="banner-slide activo">
+                    <img src="img/banner1.jpg" alt="Banner 1">
+                    <div class="banner-texto">Explora mundos generados proceduralmente</div>
+                </div>
+                <div class="banner-slide">
+                    <img src="img/banner2.jpg" alt="Banner 2">
+                    <div class="banner-texto">Derrota jefes épicos y hazte más fuerte</div>
+                </div>
+                <div class="banner-slide">
+                    <img src="img/banner3.jpg" alt="Banner 3">
+                    <div class="banner-texto">Fabrica armas, armaduras y herramientas</div>
+                </div>
+                <div class="banner-slide">
+                    <img src="img/banner4.jpg" alt="Banner 4">
+                    <div class="banner-texto">Construye tu base y defiéndela</div>
+                </div>
+            </div>
+            <button class="banner-btn" id="banner-prev">&#10094;</button>
+            <button class="banner-btn" id="banner-next">&#10095;</button>
+            <div id="banner-dots"></div>
+        </div>
+
+        <!-- ========== BOTÓN ABRIR MODAL ========== -->
+        <div style="text-align:center;margin:20px 0;">
+            <button id="btn-abrir-modal" class="boton-modal-abrir">+ Añadir nuevo objeto</button>
+        </div>
+
+        <!-- ========== MODAL ========== -->
+        <div id="modal-objeto" style="display:none;">
+            <div id="modal-contenido">
+                <h2>Añadir nuevo objeto</h2>
+                <form id="modal-form">
+                    <label for="modal-nombre">Nombre del objeto</label>
+                    <input type="text" id="modal-nombre" placeholder="Ej: Espada de Diamante" required>
+                    <label for="modal-tipo">Tipo</label>
+                    <select id="modal-tipo">
+                        <option value="Arma">Arma</option>
+                        <option value="Armadura">Armadura</option>
+                        <option value="Herramienta">Herramienta</option>
+                        <option value="Mineral">Mineral</option>
+                        <option value="Accesorio">Accesorio</option>
+                    </select>
+                    <label for="modal-desc">Descripción</label>
+                    <textarea id="modal-desc" rows="3" placeholder="Describe el objeto..."></textarea>
+                    <div class="modal-botones">
+                        <button type="submit">✅ Guardar</button>
+                        <button type="button" id="modal-cerrar">✖ Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- ========== SELECTS ENCADENADOS ========== -->
+        <div id="selects-wrapper">
+            <h2>🔍 Explorador de objetos</h2>
+            <div class="selects-fila">
+                <select id="select-categoria">
+                    <option value="">-- Elige una categoría --</option>
+                </select>
+                <select id="select-elemento">
+                    <option value="">-- Elige un elemento --</option>
+                </select>
+            </div>
+            <div id="selects-resultado">
+                <img id="select-imagen" src="" alt="" style="display:none;">
+                <p id="select-texto"></p>
+            </div>
+        </div>
+
     </main>
 
     <footer id="peu">
