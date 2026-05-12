@@ -84,7 +84,7 @@ h3, h2, h1[id] {
 /*  IMÁGENES    */
 
 .logo{
-    position: absolute;
+    position: fixed;
     width: 300px;
     height: auto;
     margin-left: 50px;
@@ -97,7 +97,7 @@ h3, h2, h1[id] {
     background-image: url(../img/CESPED.webp);
     background-repeat: repeat-x;
     bottom: -35px;
-    position: absolute;
+    position: fixed;
 }
 
 .cespedFoter{
@@ -236,3 +236,328 @@ h1, h2, h3 {
     background: linear-gradient(to bottom, rgba(150, 107, 75, 0.9) 0%, rgba(100, 70, 50, 0.95) 50%, rgba(50, 30, 20, 1) 100%);
 }
 
+/* ===== RELOJ - FECHA Y HORA ===== */
+
+#reloj {
+    position: fixed;
+    top: 155px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(56, 37, 22, 0.75);
+    border: 2px solid #966b4b;
+    border-radius: 20px;
+    padding: 6px 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Andy, sans-serif;
+    font-size: 15px;
+    color: #ffd59e;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    z-index: 1001;
+    letter-spacing: 0.5px;
+}
+
+.reloj-fecha {
+    color: #ffd59e;
+}
+
+.reloj-hora {
+    color: #ffe4b5;
+    font-weight: bold;
+}
+
+.reloj-separador {
+    color: #966b4b;
+    font-size: 18px;
+    line-height: 1;
+}
+
+
+
+/* ==========================================
+   BANNER DE IMÁGENES
+   ========================================== */
+#banner-wrapper {
+    position: relative;
+    width: 75%;
+    margin: 20px auto 20px 15%;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 3.5px solid #382516;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.8);
+    background: #382516;
+}
+
+#banner {
+    position: relative;
+    width: 100%;
+    height: 280px;
+}
+
+.banner-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+}
+
+.banner-slide.activo {
+    opacity: 1;
+}
+
+.banner-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.banner-texto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(56,37,22,0.92));
+    color: #ffd59e;
+    font-family: Andy, sans-serif;
+    font-size: 18px;
+    padding: 20px 20px 12px;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+.banner-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(56,37,22,0.75);
+    border: 2px solid #966b4b;
+    color: #ffd59e;
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-btn:hover { background: rgba(150,107,75,0.9); }
+
+#banner-prev { left: 10px; }
+#banner-next { right: 10px; }
+
+#banner-dots {
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    z-index: 10;
+}
+
+.banner-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255,213,158,0.5);
+    cursor: pointer;
+    border: 1px solid #966b4b;
+    transition: background 0.3s;
+}
+
+.banner-dot.dot-activo { background: #ffd59e; }
+
+
+/* ==========================================
+   BOTÓN ABRIR MODAL
+   ========================================== */
+.boton-modal-abrir {
+    background: linear-gradient(135deg, #966b4b, #5a3a21);
+    border: 2px solid #382516;
+    color: #ffd59e;
+    font-family: Andy, sans-serif;
+    font-size: 18px;
+    padding: 12px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+}
+
+.boton-modal-abrir:hover {
+    background: linear-gradient(135deg, #b08060, #7a5030);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+}
+
+
+/* ==========================================
+   MODAL
+   ========================================== */
+#modal-objeto {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal-contenido {
+    background: rgba(255,200,158,0.97);
+    border: 3.5px solid #382516;
+    border-radius: 12px;
+    padding: 30px;
+    width: 420px;
+    max-width: 90vw;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.8);
+    font-family: Andy, sans-serif;
+}
+
+#modal-contenido h2 {
+    color: #382516;
+    margin: 0 0 20px 0;
+    text-align: center;
+    font-size: 22px;
+    border-bottom: 2px solid #966b4b;
+    padding-bottom: 10px;
+}
+
+#modal-contenido label {
+    display: block;
+    color: #382516;
+    font-size: 14px;
+    margin: 10px 0 4px;
+    font-weight: bold;
+}
+
+#modal-contenido input,
+#modal-contenido select,
+#modal-contenido textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    border: 2px solid #966b4b;
+    border-radius: 6px;
+    background: rgba(255,220,180,0.8);
+    color: #382516;
+    font-family: Andy, sans-serif;
+    font-size: 14px;
+}
+
+#modal-contenido input:focus,
+#modal-contenido select:focus,
+#modal-contenido textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 6px rgba(76,175,80,0.5);
+}
+
+.modal-botones {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.modal-botones button {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: Andy, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    border: 2px solid #382516;
+    transition: all 0.3s;
+}
+
+.modal-botones button[type="submit"] {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+}
+
+.modal-botones button[type="button"] {
+    background: linear-gradient(135deg, #f44336, #da190b);
+    color: white;
+}
+
+.modal-botones button:hover { opacity: 0.85; transform: translateY(-1px); }
+
+
+/* ==========================================
+   SELECTS ENCADENADOS
+   ========================================== */
+#selects-wrapper {
+    width: 75%;
+    margin: 20px auto 20px 15%;
+    background: rgba(255,200,158,0.7);
+    border: 3.5px solid #382516;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.7);
+}
+
+#selects-wrapper h2 {
+    color: #382516;
+    margin: 0 0 15px 0;
+    font-size: 20px;
+    border-bottom: 2px solid #966b4b;
+    padding-bottom: 8px;
+}
+
+.selects-fila {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.selects-fila select {
+    flex: 1;
+    min-width: 180px;
+    padding: 10px;
+    border: 2px solid #966b4b;
+    border-radius: 8px;
+    background: rgba(150,107,75,0.8);
+    color: #ffd59e;
+    font-family: Andy, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.selects-fila select:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+#selects-resultado {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#select-imagen {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border: 2px solid #966b4b;
+    border-radius: 8px;
+    background: rgba(255,220,180,0.5);
+    padding: 8px;
+}
+
+#select-texto {
+    flex: 1;
+    color: #382516;
+    font-size: 15px;
+    line-height: 1.6;
+    min-width: 200px;
+}

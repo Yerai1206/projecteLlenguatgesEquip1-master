@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TERRARIA</title>
-    <link rel="stylesheet" href="../css/principal.css">
-    <link rel="stylesheet" href="../css/contacto.css">
-
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/principal.css">
+    <script src="js/reloj.js"></script>
+    <script src="js/alerts.js"></script>
+    <script src="js/funciones.js"></script>
     <link rel="icon" href="img/ARBOL.jpeg" type="image/x-icon">
-
-    <script src="../javascript/validacion.js"></script>
 </head>
+
 <body>
     <div id="wrapper">
     <header id="cap">
         <div class="cesped"></div>
-        <img class="logo" src="../img/LOGO.webp" alt="Logo">
-        <img class="FondoCap" src="../img/NUBES3.jpg" alt="Fondo">
+        <img class="logo" src="img/LOGO.webp" alt="Logo">
+        <img class="FondoCap" src="img/NUBES3.jpg" alt="Fondo">
+
 
         <!-- AUDIO -->
         <audio id="miAudio" src="img/Videos/Terraria Music - Day.mp3"></audio>
@@ -36,115 +38,140 @@
         });
         </script>
     </header>
+
     <main id="cos">
         <div id="Menu1">
             <ul class="llista1">
-                <li> <a href="../index.html">TERRARIA</a> </li><br>
-                <li> <a href="../html/armaduras.html"> ARMADURAS </a></li><br>
-                <li> <a href="../html/minerales.html">MINERALES</a></li><br>
-                <li> <a href="../html/armas.html">ARMAS</a> </li><br>
-                <li> <a href="../html/biomas.html">BIOMAS</a></li><br>
-                <li> <a href="../html/jefes.html">JEFES</a></li><br>
-                <li> <a href="../html/npcs.html">NPC's</a></li><br>
-                <li> <a href="../html/herramientas.html">HERRAMIENTAS</a></li>
+                <li> <a href="index.html">TERRARIA</a> </li><br>
+                <li> <a href="html/armaduras.html"> ARMADURAS </a></li><br>
+                <li> <a href="html/minerales.html">MINERALES</a></li><br>
+                <li> <a href="html/armas.html">ARMAS</a> </li><br>
+                <li> <a href="html/biomas.html">BIOMAS</a></li><br>
+                <li> <a href="html/jefes.html">JEFES</a></li><br>
+                <li> <a href="html/npcs.html">NPC's</a></li><br>
+                <li> <a href="html/herramientas.html">HERRAMIENTAS</a></li>
             </ul>
         </div>
-<!--
-        <div class="Menu2">
-            <div class="menuimg2"> <img class="SubMenu" src="../img/Excalibur.webp" alt="Armas cuerpo a cuerpo"> </div>
-            <div class="menuimg2"> <img class="SubMenu" src="../img/The_Eye_of_Cthulhu.webp"  alt="Armas a distancia">  </div>
-            <div class="menuimg2"> <img class="SubMenu" src="../img/Wand_of_Sparking.webp" alt="Armas mágicas"> </div>
-            <div class="menuimg2"> <img class="SubMenu" src="./img/Optic_Staff.webp" alt="Armas de invocación"> </div>
-            <div class="menuimg2"> <img class="SubMenu" src="./img/TREE" alt="MAIN"> </div>
+
+        <div id="caja1">
+            <p>Terraria es un juego de aventura, exploración y construcción en 2D donde tú cavas, construyes, combates y sobrevives en un mundo generado proceduralmente lleno de misterios, peligros y tesoros. Comienzas con poco más que un pico, y a medida que exploras cuevas, selvas, desiertos, océanos y hasta el infierno, recolectas recursos, fabricas armas, armaduras, herramientas y construyes tu propia base — ¡todo mientras enfrentas enemigos, jefes épicos y fenómenos sobrenaturales! </p>
         </div>
--->
-        
-    <div class="caja">
-            <p class="textocabeza">Formulario de Contacto - Unirse a la Aventura</p>
+        <div id="caja2">
+            <p>Terraria combina la libertad creativa de los juegos de construcción (como Minecraft) con la profundidad de un action-RPG clásico. Aunque es en 2D y con gráficos pixelados, ofrece una experiencia increíblemente rica: </p>
+            <ul>
+                <li>Decenas de jefes y eventos desafiantes. </li>
+                <li>Un sistema de progresión no lineal donde tú decides qué hacer: ser arquitecto, cazador de tesoros, guerrero, mago, granjero… o todo a la vez. </li>
+                <li>Modos cooperativos y multijugador (hasta 8 jugadores).</li>
+                <li>¡Y sigue recibiendo actualizaciones años después de su lanzamiento, con una comunidad y soporte excepcionales! </li>
+            </ul>
         </div>
-    <div class="caja">
-        <form action="../php/contacto.php" method="post">
-            <!-- Datos personales -->
-            <fieldset>
-                <legend>Información Personal <span class="requerido">*</span></legend>
-                
-                <label for="nombres">Nombre <span class="requerido">*</span></label>
-                <input class="controls" type="text" name="nombres" id="nombres" placeholder="Tu nombre completo" required pattern="[a-zA-Záéíóú\s]{3,50}" title="Mínimo 3 caracteres, solo letras">
-                
-                <label for="apellidos">Apellidos <span class="requerido">*</span></label>
-                <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Tus apellidos" required pattern="[a-zA-Záéíóú\s]{3,50}">
-                
-                <label for="correo">Correo Electrónico <span class="requerido">*</span></label>
-                <input class="controls" type="email" name="correo" id="correo" placeholder="tu.correo@ejemplo.com" required title="Ingresa un correo válido">
-            </fieldset>
-            
-            <!-- Información de juego -->
-            <fieldset>
-                <legend>Información del Jugador</legend>
-                
-                <label for="nivel_juego">Nivel de Experiencia en Terraria</label>
-                <select class="controls" name="nivel_juego" id="nivel_juego">
-                    <optgroup label="Principiante">
-                        <option value="nunca">Nunca he jugado</option>
-                        <option value="iniciado">Acabo de empezar</option>
-                    </optgroup>
-                    <optgroup label="Intermedio">
-                        <option value="intermedio">Tengo experiencia moderada</option>
-                        <option value="avanzado">Soy bastante hábil</option>
-                    </optgroup>
-                    <optgroup label="Experto">
-                        <option value="experto">Soy un veterano</option>
-                        <option value="speedrunner">Speedrunner / Máximo desafío</option>
-                    </optgroup>
-                </select>
-                
-                <label for="horas_juego">Horas jugadas (aproximado) <span class="requerido">*</span></label>
-                <input class="controls" type="number" name="horas_juego" id="horas_juego" min="0" max="9999" placeholder="0" required title="Ingresa un número">
-                
-                <label for="fecha_registro">Fecha de Registro <span class="requerido">*</span></label>
-                <input class="controls" type="date" name="fecha_registro" id="fecha_registro" required>
-                
-                <label for="clase_favorita">Clase Favorita <span class="requerido">*</span></label>
-                <input class="controls" type="text" name="clase_favorita" id="clase_favorita" placeholder="Ej: Melee, Mage, Summoner" required list="clases_terraria">
-                <datalist id="clases_terraria">
-                    <option value="Melee">
-                    <option value="Magic">
-                    <option value="Ranged">
-                    <option value="Summoner">
-                    <option value="Hybrid">
-                </datalist>
-            </fieldset>
-            
-            <!-- Contacto -->
-            <fieldset>
-                <legend>Datos de Contacto <span class="requerido">*</span></legend>
-                
-                <label for="tlf">Número de Teléfono <span class="requerido">*</span></label>
-                <input class="controls" type="tel" name="tlf" id="tlf" placeholder="+34 600 000 000" required pattern="[\d\s\+\-]{7,15}" title="Formato: +34 600000000">
-                
-                <label for="contraseña">Contraseña <span class="requerido">*</span></label>
-                <input class="controls" type="password" name="contrasena" id="contrasena" placeholder="Contraseña segura" required minlength="8" title="Mínimo 8 caracteres">
-            </fieldset>
-            
-            <!-- Comentarios -->
-            <fieldset>
-                <legend>Mensaje Adicional</legend>
-                
-                <label for="comentarios">Cuéntanos sobre ti o tus experiencias en Terraria</label>
-                <textarea class="controls textarea-form" name="comentarios" id="comentarios" placeholder="Comparte tus aventuras, sugerencias o simplemente saluda..." rows="5" maxlength="500"></textarea>
-                <small>Máximo 500 caracteres</small>
-            </fieldset>
-            
-            <!-- Botones -->
-            <div class="form-buttons">
-                <button type="submit" class="botons">Registrar</button>
-                <button type="reset" class="botons botons-reset">Limpiar</button>
+
+        <div class="imgcaja1">
+            <div id="caja3">
+                <p>GÉNERO: Sandbox / Aventura / Acción-RPG / Construcción / Supervivencia </p>
+                <p>AMBIENTACIÓN: Mundo pixelado en 2.5D (2D con profundidad vertical), con biomas variados: </p>
+                <ul>
+                    <li>Selvas venenosas </li>
+                    <li>Desiertos con pirámides </li>
+                    <li>Océanos profundos </li>
+                    <li>Subterráneo lleno de minerales y monstruos </li>
+                    <li>El Inframundo (infierno) </li>
+                    <li>Y mundos enteros en modo Hardmode (post-derrota del primer jefe final), mucho más desafiantes y coloridos. </li>
+                </ul>
             </div>
-            
-            <p class="textito">
-                <a href="mailto:stogabrad@alu.edu.gva.es">✉️ ¡Contacta directamente con nosotros!</a>
-            </p>
-        </form>
+                <div class="imagen1"></div>
+        </div>
+
+        <div id="caja4">
+            <p>El estilo visual es retro pero lleno de personalidad, con animaciones expresivas, efectos de partículas y una banda sonora ambiental y dinámica compuesta por Scott Lloyd Shelly, que cambia según dónde estés y qué estés enfrentando. </p>
+        </div>
+        <div class="imgcaja2">
+            <div class="imagen2"> <video src="./img/Videos/videoplayback.mp4" autoplay muted loop></video> </div>
+            <div id="caja5">
+                <p>MECÁNICAS PRINICPALES: </p>
+                <ul>
+                    <li>Minería y recolección: extrae cientos de tipos de bloques y recursos. </li>
+                    <li>Fabricación (crafting): combina materiales para crear armas, herramientas, pociones, muebles, maquinaria y más. </li>
+                    <li>Construcción: diseña casas, trampas, granjas automáticas, ciudades enteras… ¡tu imaginación es el límite! </li>
+                    <li>Combate: usa espadas, arcos, armas mágicas, invocaciones y hasta cañones contra enemigos y jefes épicos. </li>
+                    <li>Progresión por jefes: cada jefe derrotado desbloquea nuevas mecánicas, NPCs, biomas y contenido. </li>
+                    <li>Sistema de NPCs: personajes que se mudan a tu mundo si les das una casa, y te ofrecen comercio, servicios o información. </li>
+                    <li>Eventos aleatorios: invasiones de goblins, lluvias de meteoritos, festivales piratas, invasiones lunares… </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ========== BANNER DE IMÁGENES ========== -->
+        <div id="banner-wrapper">
+            <div id="banner">
+                <div class="banner-slide activo">
+                    <img src="img/banner1.jpg" alt="Banner 1">
+                    <div class="banner-texto">Explora mundos generados proceduralmente</div>
+                </div>
+                <div class="banner-slide">
+                    <img src="img/banner2.jpg" alt="Banner 2">
+                    <div class="banner-texto">Derrota jefes épicos y hazte más fuerte</div>
+                </div>
+                <div class="banner-slide">
+                    <img src="img/banner3.jpg" alt="Banner 3">
+                    <div class="banner-texto">Fabrica armas, armaduras y herramientas</div>
+                </div>
+                <div class="banner-slide">
+                    <img src="img/banner4.jpg" alt="Banner 4">
+                    <div class="banner-texto">Construye tu base y defiéndela</div>
+                </div>
+            </div>
+            <button class="banner-btn" id="banner-prev">&#10094;</button>
+            <button class="banner-btn" id="banner-next">&#10095;</button>
+            <div id="banner-dots"></div>
+        </div>
+
+        <!-- ========== BOTÓN ABRIR MODAL ========== -->
+        <div style="text-align:center;margin:20px 0;">
+            <button id="btn-abrir-modal" class="boton-modal-abrir">+ Añadir nuevo objeto</button>
+        </div>
+
+        <!-- ========== MODAL ========== -->
+        <div id="modal-objeto" style="display:none;">
+            <div id="modal-contenido">
+                <h2>Añadir nuevo objeto</h2>
+                <form id="modal-form">
+                    <label for="modal-nombre">Nombre del objeto</label>
+                    <input type="text" id="modal-nombre" placeholder="Ej: Espada de Diamante" required>
+                    <label for="modal-tipo">Tipo</label>
+                    <select id="modal-tipo">
+                        <option value="Arma">Arma</option>
+                        <option value="Armadura">Armadura</option>
+                        <option value="Herramienta">Herramienta</option>
+                        <option value="Mineral">Mineral</option>
+                        <option value="Accesorio">Accesorio</option>
+                    </select>
+                    <label for="modal-desc">Descripción</label>
+                    <textarea id="modal-desc" rows="3" placeholder="Describe el objeto..."></textarea>
+                    <div class="modal-botones">
+                        <button type="submit">✅ Guardar</button>
+                        <button type="button" id="modal-cerrar">✖ Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- ========== SELECTS ENCADENADOS ========== -->
+        <div id="selects-wrapper">
+            <h2>🔍 Explorador de objetos</h2>
+            <div class="selects-fila">
+                <select id="select-categoria">
+                    <option value="">-- Elige una categoría --</option>
+                </select>
+                <select id="select-elemento">
+                    <option value="">-- Elige un elemento --</option>
+                </select>
+            </div>
+            <div id="selects-resultado">
+                <img id="select-imagen" src="" alt="" style="display:none;">
+                <p id="select-texto"></p>
+            </div>
+        </div>
 
     </main>
 
